@@ -62,7 +62,7 @@ MachineLearningJoin_node3 = sparkSqlQuery(
 )
 
 MachineLearningCurated_node4 = glueContext.getSink(
-    path="s3://<YOUR-BUCKET>/machine_learning/curated/",
+    path="s3://stedi-canyon-2026/machine_learning/curated/",
     connection_type="s3",
     updateBehavior="UPDATE_IN_DATABASE",
     partitionKeys=[],

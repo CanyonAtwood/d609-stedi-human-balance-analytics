@@ -49,7 +49,7 @@ CustomerPrivacyFilter_node2 = sparkSqlQuery(
 # enableUpdateCatalog + updateBehavior satisfies the rubric requirement that
 # the job dynamically infers and updates the Glue table schema.
 CustomerTrusted_node3 = glueContext.getSink(
-    path="s3://<YOUR-BUCKET>/customer/trusted/",
+    path="s3://stedi-canyon-2026/customer/trusted/",
     connection_type="s3",
     updateBehavior="UPDATE_IN_DATABASE",
     partitionKeys=[],

@@ -62,7 +62,7 @@ StepTrainerJoin_node3 = sparkSqlQuery(
 )
 
 StepTrainerTrusted_node4 = glueContext.getSink(
-    path="s3://<YOUR-BUCKET>/step_trainer/trusted/",
+    path="s3://stedi-canyon-2026/step_trainer/trusted/",
     connection_type="s3",
     updateBehavior="UPDATE_IN_DATABASE",
     partitionKeys=[],

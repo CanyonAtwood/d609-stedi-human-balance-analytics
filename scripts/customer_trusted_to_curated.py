@@ -55,7 +55,7 @@ CustomerCuratedJoin_node3 = sparkSqlQuery(
 )
 
 CustomerCurated_node4 = glueContext.getSink(
-    path="s3://<YOUR-BUCKET>/customer/curated/",
+    path="s3://stedi-canyon-2026/customer/curated/",
     connection_type="s3",
     updateBehavior="UPDATE_IN_DATABASE",
     partitionKeys=[],

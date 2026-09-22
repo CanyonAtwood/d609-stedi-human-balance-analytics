@@ -2,7 +2,7 @@
 -- STEDI Human Balance Analytics : Landing Zone DDL
 -- Source : mobile app accelerometer readings (JSON)
 --
--- NOTE: replace <YOUR-BUCKET> below with your own S3 bucket name before running.
+-- NOTE: replace stedi-canyon-2026 below with your own S3 bucket name before running.
 -- The JSON key is "timestamp" (lowercase) and "user" holds the customer email.
 
 CREATE DATABASE IF NOT EXISTS stedi;
@@ -21,5 +21,5 @@ WITH SERDEPROPERTIES (
     'case.insensitive'      = 'TRUE'
 )
 STORED AS TEXTFILE
-LOCATION 's3://<YOUR-BUCKET>/accelerometer/landing/'
+LOCATION 's3://stedi-canyon-2026/accelerometer/landing/'
 TBLPROPERTIES ('classification' = 'json');

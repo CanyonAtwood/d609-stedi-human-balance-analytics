@@ -2,7 +2,7 @@
 -- STEDI Human Balance Analytics : Landing Zone DDL
 -- Source : STEDI Step Trainer motion sensor records (JSON)
 --
--- NOTE: replace <YOUR-BUCKET> below with your own S3 bucket name before running.
+-- NOTE: replace stedi-canyon-2026 below with your own S3 bucket name before running.
 
 CREATE DATABASE IF NOT EXISTS stedi;
 
@@ -18,5 +18,5 @@ WITH SERDEPROPERTIES (
     'case.insensitive'      = 'TRUE'
 )
 STORED AS TEXTFILE
-LOCATION 's3://<YOUR-BUCKET>/step_trainer/landing/'
+LOCATION 's3://stedi-canyon-2026/step_trainer/landing/'
 TBLPROPERTIES ('classification' = 'json');

@@ -55,7 +55,7 @@ AccelerometerPrivacyJoin_node3 = sparkSqlQuery(
 )
 
 AccelerometerTrusted_node4 = glueContext.getSink(
-    path="s3://<YOUR-BUCKET>/accelerometer/trusted/",
+    path="s3://stedi-canyon-2026/accelerometer/trusted/",
     connection_type="s3",
     updateBehavior="UPDATE_IN_DATABASE",
     partitionKeys=[],

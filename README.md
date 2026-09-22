@@ -63,7 +63,7 @@ Athena query results for each zone are in `screenshots/`.
 
 ## Notes
 
-- Replace `<YOUR-BUCKET>` in every script with the target S3 bucket before running.
+- All scripts target the S3 bucket `stedi-canyon-2026`.
 - The jobs use `Transform - SQL Query` nodes rather than Join nodes, and
   `Data Source - Data Catalog` nodes rather than S3 bucket nodes.
 - Every sink sets `enableUpdateCatalog=True` and
